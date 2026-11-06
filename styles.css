@@ -1,0 +1,127 @@
+
+/* Website theme colors */
+:root {
+    --primary: #071b3a;
+    --accent: #d4af37;
+    --background: #f4f6f9;
+    --text: #222222;
+}
+
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* Navigation bar */
+nav {
+    background-color: var(--primary);
+    color: white;
+    padding: 18px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero banner */
+.hero {
+    background: linear-gradient(to right, #071b3a, #174b80);
+    color: white;
+    text-align: center;
+    padding: 100px 20px 60px;
+    margin-top: 55px;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent);
+    color: #071b3a;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0cc55;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+/* Booking form */
+form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #cccccc;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
