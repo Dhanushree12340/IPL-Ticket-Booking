@@ -64,3 +64,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showToast("Welcome! Please complete your booking form!");
 });
+// Activity 8: Hamburger Menu
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    }
+
+    // Filter Match Cards
+    const teamFilter = document.getElementById("teamFilter");
+    const matchCards = document.querySelectorAll(".match-card");
+
+    if (teamFilter) {
+        teamFilter.addEventListener("change", function () {
+
+            const selectedTeam = teamFilter.value;
+
+            matchCards.forEach(function (card) {
+
+                const teams = card.dataset.teams;
+
+                if (selectedTeam === "all" ||
+                    teams.split(" ").includes(selectedTeam)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+        });
+    }
+
+    // Grid and List View
+    const matchContainer = document.getElementById("matchContainer");
+    const gridView = document.getElementById("gridView");
+    const listView = document.getElementById("listView");
+
+    if (matchContainer && gridView && listView) {
+
+        gridView.addEventListener("click", function () {
+            matchContainer.classList.remove("list-view");
+        });
+
+        listView.addEventListener("click", function () {
+            matchContainer.classList.add("list-view");
+        });
+    }
+
+});

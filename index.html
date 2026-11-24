@@ -8,14 +8,18 @@
     </head>
     <body>
         <header>
-            <nav>
-                <ul>
-                    <a href="#matches">Matches</a>
-                    <a href="booking.html#booking" class="book-btn">
-                    Book Ticket
-                    </a>
-                    <a href="#mybookings">My Booking</a>
-                    <a href="#guidelines">Guidelines</a>
+            <nav class="navbar">
+                <h2 class="logo">IPL 2026</h2>
+
+                <button class="menu-toggle" id="menuToggle">
+                    ☰
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#matches">Matches</a></li>
+                    <li><a href="booking.html">Book Ticket</a></li>
+                    <li><a href="#guidelines">Guidelines</a></li>
                 </ul>
             </nav>
         </header>
@@ -60,17 +64,44 @@
             </section>
 
             <header>
-                <section id="matches" class="content-section">
-                    <h2>Match Schedule</h2>
+                <section id="matches">
+                    <h2>IPL 2026 Match Schedule</h2>
 
-                    <label>Filter by Team:</label>
-                    <select>
-                        <option>All Teams</option>
-                        <option>RCB</option>
-                        <option>CSK</option>
-                        <option>MI</option>
-                        <option>KKR</option>
+                    <label for="teamFilter">Filter by Team:</label>
+
+                    <select id="teamFilter">
+                        <option value="all">All Teams</option>
+                        <option value="RCB">RCB</option>
+                        <option value="CSK">CSK</option>
+                        <option value="MI">MI</option>
+                        <option value="KKR">KKR</option>
                     </select>
+
+                    <button id="gridView">Grid View</button>
+                    <button id="listView">List View</button>
+
+                    <div class="match-container" id="matchContainer">
+
+                        <div class="match-card" data-teams="RCB CSK">
+                            <h3>RCB vs CSK</h3>
+                            <p>Date: 10 April 2026</p>
+                            <p>Venue: Bengaluru</p>
+                        </div>
+
+                        <div class="match-card" data-teams="MI KKR">
+                            <h3>MI vs KKR</h3>
+                            <p>Date: 12 April 2026</p>
+                            <p>Venue: Mumbai</p>
+                        </div>
+
+                        <div class="match-card" data-teams="CSK MI">
+                            <h3>CSK vs MI</h3>
+                            <p>Date: 15 April 2026</p>
+                            <p>Venue: Chennai</p>
+                        </div>
+
+                    </div>
+                </section>
 
                     <table border="1">
             <tr>
@@ -196,19 +227,27 @@
             </section>
 
             <hr>
-
-            
-            <section id="guidelines" class="content-section">
+            <section id="guidelines">
                 <h2>Booking Guidelines</h2>
 
-                <h3>1. Ticket Verification</h3>
-                <p>Carry your valid ticket to enter the stadium.</p>
+                <div class="guidelines-container">
 
-                <h3>2. ID Proof Requirement</h3>
-                <p>Carry valid ID proof for verification.</p>
+                    <div class="guideline-card">
+                        <h3>Ticket Booking</h3>
+                        <p>Enter your details correctly while booking tickets.</p>
+                    </div>
 
-                <h3>3. Prohibited Items</h3>
-                <p>Do not carry restricted items inside the stadium.</p>
+                    <div class="guideline-card">
+                        <h3>Entry Rules</h3>
+                        <p>Carry your valid ticket when entering the stadium.</p>
+                    </div>
+
+                    <div class="guideline-card">
+                        <h3>Stadium Rules</h3>
+                        <p>Follow the stadium rules and instructions.</p>
+                    </div>
+
+                </div>
             </section>
 
             <hr>
